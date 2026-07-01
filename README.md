@@ -135,7 +135,6 @@ Anthropic's contextual retrieval technique prepends a 1-2 sentence LLM-generated
 ### Backend
 
 ```bash
-cd nergy-clean
 python -m venv venv
 source venv/bin/activate      # Linux/Mac
 pip install -r requirements.txt
