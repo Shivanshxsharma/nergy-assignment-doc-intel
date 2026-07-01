@@ -1,0 +1,29 @@
+# Core
+python-dotenv>=1.0.0
+
+# LangChain ecosystem
+langchain>=0.2.0
+# langchain-google-genai provides BOTH the embedding client and the chat LLM
+# (ChatGoogleGenerativeAI) used by the generation layer.
+langchain-google-genai>=4.0.0
+
+# API layer
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+python-multipart>=0.0.9   # required by FastAPI for multipart/form-data uploads
+
+# PDF processing + chunking — Docling parses PDFs to a structured
+# DoclingDocument; HybridChunker chunks it with page provenance preserved.
+docling>=2.0.0
+# Tokenizer used by HybridChunker to size chunks (proxy for Gemini's tokenizer).
+transformers>=4.40.0
+
+# Sparse retrieval — now server-side in Pinecone via the hosted sparse model
+# (pinecone-sparse-english-v0, generated through pc.inference.embed). The old
+# in-memory rank-bm25 / BM25Retriever is no longer used.
+
+# Reranking (cross-encoder via Cohere)
+cohere>=5.0.0
+
+# Pinecone SDK (used directly, no langchain-pinecone wrapper)
+pinecone>=5.0.0
